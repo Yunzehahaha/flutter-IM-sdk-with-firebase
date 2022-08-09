@@ -15,7 +15,7 @@ class SendUser {
   SendUser.fromFirebaseUser(Map data)
       : id = data['id'].toString(),
         name = data['nickname'].toString(),
-        portraitUri = data['photoUrl'].toString();
+        portraitUri = data['portraitUri'].toString();
 
   Map toMap() {
     Map map = {};
