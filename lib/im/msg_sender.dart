@@ -115,7 +115,7 @@ class MessageSender {
 
   void sendAudioMessage(
       File file, String receiverId, String conversationType) async {
-    String fileName = '${DateTime.now().millisecondsSinceEpoch}.mp3';
+    String fileName = '${DateTime.now().millisecondsSinceEpoch}.aac';
     UploadTask uploadTask = _uploadAudioFile(file, fileName);
     try {
       TaskSnapshot snapshot = await uploadTask;
