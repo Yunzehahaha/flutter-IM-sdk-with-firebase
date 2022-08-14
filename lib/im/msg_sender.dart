@@ -35,7 +35,7 @@ class MessageSender {
   }
 
   void sendTextMessage(
-      String content, String receiverId, String conversationType) {
+      String content, String receiverId, String conversationType) async {
     int timeStamp = DateTime.now().millisecondsSinceEpoch;
     DocumentReference documentReference = firebaseFirestore
         .collection('message')
@@ -62,7 +62,13 @@ class MessageSender {
         message.toFirebaseMap(),
       );
     });
-    _db.insertMessageContent(message);
+    await _db.insertMessageContent(message);
+    await ConversationDataHelper.updateOrInsertConversation(
+        message, message.senderId, firebaseFirestore);
+
+    log('insert to local db done');
+    // notify the listener to update UI
+    IMClient.messageStreamController.add(message);
   }
 
   void sendImageMessage(
