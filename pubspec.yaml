@@ -12,9 +12,9 @@ dependencies:
     sdk: flutter
 
   fluttertoast: ^8.0.9
-  firebase_core : 1.18.0
-  cloud_firestore:  3.1.18
-  firebase_storage: 10.2.18
+  firebase_core : ^1.21.0
+  cloud_firestore: ^3.4.5
+  firebase_storage: ^10.3.6
   just_audio: ^0.9.28
   sqflite: 
 
