@@ -65,14 +65,14 @@ class ConversationDataHelper {
       await db.insertConversation(conversation);
     } else {
       Map<String, dynamic> values = <String, dynamic>{};
-      if (msgContent.user.id != senderUserId) {
+      if (!msgContent.fromMe(IMClient.currentUser.id)) {
         values['unreadCount'] = conversation.unreadCount + 1;
         bool hasAtYou = MessageUtil.checkMsgHasAtYou(msgContent);
         values['atCount'] = (conversation.atCount) + (hasAtYou ? 1 : 0);
       }
       values['sentTime'] = msgContent.sentTime;
       values['lastMessage'] = lastMessage.toJson();
-      log('atCount = ${values['atCount']}');
+      log('unreadCount = ${values['unreadCount']}');
       await db.updateConversation(
           msgContent.conversationType, conversationTargetId, values);
     }

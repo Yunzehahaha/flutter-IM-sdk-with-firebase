@@ -70,4 +70,9 @@ class IMClient {
     }
     return await _db.getHistoryMessages(type, targetId, oldestMessageId, count);
   }
+
+  static Future<bool> clearUnreadConversation(
+      String type, String senderId) async {
+    return await _db.updateConversation(type, senderId, {'unreadCount': 0});
+  }
 }
