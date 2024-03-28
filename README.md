@@ -16,12 +16,20 @@ know whether this package might be useful for them.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Real-time Messaging: Enable users to send and receive messages in real-time.
+User Authentication: Authenticate users using Firebase Authentication.
+Message Encryption: Ensure security and privacy with message encryption.
+User Presence: Track user presence with online/offline status indicators.
+Push Notifications: Send push notifications for new messages using Firebase Cloud Messaging.
+Image and File Sharing: Allow users to share images and files within conversations.
+Customization: Customize the UI and features to match your application's requirements.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Installation: Add the Flutter IM SDK to your pubspec.yaml file:
+dependencies:
+  flutter_im_sdk: ^1.0.0
+
 
 ## Usage
 
