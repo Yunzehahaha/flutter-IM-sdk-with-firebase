@@ -16,12 +16,12 @@ know whether this package might be useful for them.
 
 ## Features
 
-Real-time Messaging: Enable users to send and receive messages in real-time.
-User Authentication: Authenticate users using Firebase Authentication.
-Message Encryption: Ensure security and privacy with message encryption.
-User Presence: Track user presence with online/offline status indicators.
-Push Notifications: Send push notifications for new messages using Firebase Cloud Messaging.
-Image and File Sharing: Allow users to share images and files within conversations.
+ - Real-time Messaging: Enable users to send and receive messages in real-time.
+ - User Authentication: Authenticate users using Firebase Authentication.
+ - Message Encryption: Ensure security and privacy with message encryption.
+ - User Presence: Track user presence with online/offline status indicators.
+ - Push Notifications: Send push notifications for new messages using Firebase Cloud Messaging.
+ - Image and File Sharing: Allow users to share images and files within conversations.
 Customization: Customize the UI and features to match your application's requirements.
 ## Getting started
 
